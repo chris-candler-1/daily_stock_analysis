@@ -589,3 +589,10 @@ jobs:
             echo "📜 最近日志（最后 30 行）:"
             tail -30 logs/stock_analysis_*.log 2>/dev/null || echo "无日志"
           fi
+
+      - name: Upload Stock Analysis Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-stock-report
+          path: /home/runner/work/YOUR_REPOSITORY_NAME/YOUR_REPOSITORY_NAME/*.html # Or whatever format the report is (e.g., .csv, .md, .txt)
+
