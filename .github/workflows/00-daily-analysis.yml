@@ -594,5 +594,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: daily-stock-report
-          path: /home/runner/work/YOUR_REPOSITORY_NAME/YOUR_REPOSITORY_NAME/*.html # Or whatever format the report is (e.g., .csv, .md, .txt)
+          path: /home/runner/work/daily_stock_analysis/daily_stock_analysis/*.html # Or whatever format the report is (e.g., .csv, .md, .txt)
 
