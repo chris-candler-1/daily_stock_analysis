@@ -1,9 +1,15 @@
-name: 每日股票分析
+
+name: Daily Stock Analysis
 
 on:
-  # 定时触发 - 每天北京时间 18:00 (UTC 10:00)
   schedule:
-    - cron: '0 10 * * 1-5'     # 周一到周五，UTC 10:00 = 北京时间 18:00
+    - cron: '0 8 * * 1-5' # Runs Monday-Friday at 8 AM UTC
+  workflow_dispatch:      # Allows manual triggers
+
+# Highlight: This applies to all jobs and steps in this file
+env:
+  LANG: "en_US.UTF-8"
+  LC_ALL: "en_US.UTF-8"
   
   # 手动触发
   workflow_dispatch:
@@ -554,11 +560,11 @@ jobs:
 
           # 执行分析
           if [ "$MODE" = "market-only" ]; then
-            python main.py --market-review $FORCE_RUN_ARG
+            python main.py --market-review $FORCE_RUN_ARG --language EN
           elif [ "$MODE" = "stocks-only" ]; then
-            python main.py --no-market-review $FORCE_RUN_ARG
+            python main.py --no-market-review $FORCE_RUN_ARG --language EN
           else
-            python main.py $FORCE_RUN_ARG
+            python main.py $FORCE_RUN_ARG --language EN
           fi
       
       - name: 上传分析报告
