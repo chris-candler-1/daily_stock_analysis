@@ -1,14 +1,12 @@
 
 name: Daily Stock Analysis
+env:
+  LANG: "en_US.UTF-8"
+  LC_ALL: "en_US.UTF-8"
 
 on:
   schedule:
     - cron: '0 8 * * 1-5' # Runs Monday-Friday at 8 AM UTC
-
-  # Highlight: This applies to all jobs and steps in this file
-  env:
-    LANG: "en_US.UTF-8"
-    LC_ALL: "en_US.UTF-8"
   
   # 手动触发
   workflow_dispatch:
