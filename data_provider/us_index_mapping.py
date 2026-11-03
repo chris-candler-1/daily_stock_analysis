@@ -28,7 +28,7 @@ US_INDEX_MAPPING = {
     '^DJI': ('^DJI', 'Dow Jones Industrial'),
     'DJIA': ('^DJI', 'Dow Jones Industrial Average'),
     # 纳斯达克综合指数
-    'IXIC': ('^IXIC', 'NASDAQ Compsite Index'),
+    'IXIC': ('^IXIC', 'NASDAQ Composite Index'),
     '^IXIC': ('^IXIC', 'NASDAQ Composite Index'),
     'NASDAQ': ('^IXIC', 'NASDAQ'),
     # 纳斯达克 100
